@@ -1,0 +1,4 @@
+<h1>Movies:</h1>
+<% for( let i = 0; i < allMovies.length; i++ ) { %>
+<a href="/movies/<%=allMovies[i]._id%>"><h1><%=allMovies[i].title%></h1></a>
+<% } %>

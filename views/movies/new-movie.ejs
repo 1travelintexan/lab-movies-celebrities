@@ -1,0 +1,22 @@
+<h1>Create a Movie!</h1>
+<form method="POST" action="/movies/create">
+  <label>
+    Title:
+    <input name="title" type="text" />
+  </label>
+  <label>
+    Genre:
+    <input name="genre" type="text" />
+  </label>
+  <label>
+    Plot:
+    <input name="plot" type="text" />
+  </label>
+  <label for="cast">Choose the cast:</label>
+  <select name="cast" multiple>
+    <% for( let i = 0; i < allCelebs.length; i++ ) { %>
+    <option value="<%=allCelebs[i]._id%>"><%=allCelebs[i].name%></option>
+    <% } %>
+  </select>
+  <button>Create</button>
+</form>
